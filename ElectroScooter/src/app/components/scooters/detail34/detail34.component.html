@@ -1,0 +1,46 @@
+<ng-container>
+  <form *ngIf="copiedSelectedScooterFromOverview != null;">
+    <div class="scooterThatShowsId" style="background-color: beige"><p
+      style="font-weight: 700;color:mediumblue;font-size: 16px; padding: 15px">Update
+      scooter {{copiedSelectedScooterFromOverview.tag}} (id{{copiedSelectedScooterFromOverview.id}})</p></div>
+
+
+    <div class="mb-3">
+      <label for="tag" class="form-label">Tag:</label>
+      <input value="{{copiedSelectedScooterFromOverview.tag}}" [ngModelOptions]="{standalone: true}" [(ngModel)]="copiedSelectedScooterFromOverview.tag" class="form-control" id="tag">
+    </div>
+
+
+    <label for="status" class="form-label">Status:</label>
+    <br>
+    <select name="{{copiedSelectedScooterFromOverview.status}}" [(ngModel)]="copiedSelectedScooterFromOverview.status" id="status" class="browser-default custom-select"
+            aria-label="Default select example">
+      <option *ngFor="let status of statusArray" >{{status}}</option>
+    </select>
+
+    <div class="mb-3">
+      <label for="gpsLocation" class="form-label">GPS-Location:</label>
+      <input value="{{copiedSelectedScooterFromOverview.gpsLocation}}"
+             [(ngModel)]="copiedSelectedScooterFromOverview.gpsLocation" [ngModelOptions]="{standalone: true}"
+             class="form-control" id="gpsLocation" >
+    </div>
+
+    <div class="mb-3">
+      <label for="mileage" class="form-label">Mileage</label>
+      <input value="{{copiedSelectedScooterFromOverview.mileage}}" [(ngModel)]="copiedSelectedScooterFromOverview.mileage" [ngModelOptions]="{standalone: true}" class="form-control" id="mileage">
+    </div>
+
+    <div class="mb-3">
+      <label for="batteryCharge" class="form-label">Battery Charge:</label>
+      <input value="{{copiedSelectedScooterFromOverview.batteryCharge}}" [ngModelOptions]="{standalone: true}" [(ngModel)]="copiedSelectedScooterFromOverview.batteryCharge" class="form-control" id="batteryCharge">
+    </div>
+
+    <div style="float:right;">
+      <button (click)="onClickCancel()" type="button"  class="btn btn-primary saveCancelButtons">Cancel</button>
+      <button [disabled]="checkChanges()"  (click)="onClickReset()"   type="button" class="btn btn-primary resetClearButtons">Reset</button>
+      <button (click)="onClickClear()"  type="button" class="btn btn-primary resetClearButtons">Clear</button>
+      <button [disabled]="checkChanges()"  (click)="onClickSave ()"  type="button" class="btn btn-primary saveCancelButtons">Save</button>
+      <button [disabled]="!checkChanges()" (click)="onClickDelete()" type="button" class="btn btn-primary delete" >Delete</button>
+    </div>
+  </form>
+</ng-container>

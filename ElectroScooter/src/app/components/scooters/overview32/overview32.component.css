@@ -1,0 +1,16 @@
+.tablescreen2 {
+  padding: 1%;
+}
+
+.btn {
+  float: right;
+}
+#title {
+  padding: 5px;
+}
+.selected {
+  background: lightblue;
+}
+.notSelected {
+  background: white;
+}

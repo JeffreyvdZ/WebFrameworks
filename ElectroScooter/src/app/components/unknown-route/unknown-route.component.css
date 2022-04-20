@@ -1,0 +1,11 @@
+.alert-danger{
+  margin: 5%;
+  padding: 3%;
+  font-size: 50px;
+}
+.errorOccurred{
+  font-weight: 700;
+}
+.errorMessage{
+  font-size: 20px;
+}

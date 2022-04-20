@@ -1,0 +1,25 @@
+<h1 id="title">A list of scooters in your neighbourhood:</h1>
+
+<div class="row">
+  <div class="tablescreen2  col-4">
+  <table class="table table-bordered">
+    <thead>
+    <tr style="background-color: beige">
+      <th scope="col">Tag</th>
+      <th scope="col">Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr [ngClass]="{'selected': selectedScooter === scooter}"  *ngFor="let scooter of scooters" (click)="onSelect(scooter)">
+      <td>{{scooter.tag}}</td>
+      <td>{{scooter.status}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <button (click)="onNewScooter()" type="button" class="btn btn-primary">New Scooter</button>
+</div>
+  <div class="col-8">
+  <app-detail32 [selectedScooterFromOverview]="selectedScooter" (deleteScooter)="onDelete($event)"></app-detail32>
+</div>
+</div>
+

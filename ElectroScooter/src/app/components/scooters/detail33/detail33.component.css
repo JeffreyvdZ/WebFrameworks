@@ -1,0 +1,14 @@
+.detailview {
+  padding: 1%;
+}
+.form-title {
+  background-color: beige;
+}
+.card-header {
+  background-color: beige;
+  margin: 7px 0 7px 0;
+  border: lightgrey 1px solid;
+}
+button {
+  margin: 2px;
+}

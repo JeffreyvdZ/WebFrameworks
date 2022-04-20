@@ -1,0 +1,48 @@
+
+<nav class="navbar navbar-expand-lg navbar-light">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarToggleExternalContent" aria-expanded="false">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/home" routerLinkActive="activeNavBar" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Scooters
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" routerLink="/scooters/overview31" routerLinkActive="active">All scooters list</a></li>
+          <li><a class="dropdown-item" routerLink="/scooters/overview32" routerLinkActive="active">Scooters edit (component store)</a></li>
+          <li><a class="dropdown-item" routerLink="/scooters/overview33" routerLinkActive="active">Scooters edit (from service)</a></li>
+          <li><a class="dropdown-item" routerLink="/scooters/overview34" routerLinkActive="active">Scooters edit (routed)</a></li>
+          <li><a class="dropdown-item" routerLink="/scooters/overview35" routerLinkActive="active">Scooters edit (routed-v2)</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          My Trips
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">last month</a></li>
+          <li><a class="dropdown-item" href="#">history</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+      <li *ngIf="sessionSbService.isAuthenticated() === false" class="nav-item">
+        <a class="nav-link" routerLink="/sign-up" routerLinkActive="activeNavBar">Sign Up</a>
+      </li>
+      <li *ngIf="sessionSbService.isAuthenticated() === false" class="nav-item">
+        <a class="nav-link" routerLink="/sign-in" routerLinkActive="activeNavBar">Log in</a>
+      </li>
+      <li *ngIf="sessionSbService.isAuthenticated() === true" class="nav-item">
+        <a class="nav-link" routerLink="/sign-out" routerLinkActive="activeNavBar">Log Out</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+

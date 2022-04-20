@@ -1,0 +1,91 @@
+.btn-secondary {
+  color: #0089ff;
+  background-color: #ffffff;
+  border-color: #0089ff;
+  width: 102%;
+height: 50px;
+}
+.badge-light {
+  background-color: #0089ff;
+  color: white;
+  float: right;
+}
+
+.content{
+  padding: 10px;
+}
+
+#paddingForDiv{
+  padding: 10% 0px 0px 0px;
+}
+
+.col-3{
+  padding: 1%;
+}
+
+button{
+  width: 25%;
+}
+
+.additionalInfo{
+  font-size: 20px;
+  text-align: center;
+}
+
+li:hover{
+  cursor: pointer;
+  background: #3374C2;
+}
+
+.dropup, .dropright, .dropdown, .dropleft {
+  text-align: center;
+  padding: 5px 0px 0px 15px;
+}
+img {
+  width:  50%;
+  height: 300px;
+  object-fit: cover;
+  display: inline-block;
+  padding: 5px;
+}
+
+
+img:hover {
+  cursor: pointer;
+  border-radius: 20px;
+  border: 5px solid #0089ff;
+}
+
+span{
+  font-size: 16px;
+}
+
+hr{
+  margin-right: 5%;
+}
+
+
+
+p{
+  font-size: 18px;
+}
+
+.dropdown-menu.show {
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .images img{
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .holder div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .info {
+    padding: 20px;
+  }
+}

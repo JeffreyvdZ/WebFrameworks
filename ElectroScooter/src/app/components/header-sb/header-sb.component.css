@@ -1,0 +1,49 @@
+.header {
+  background-color: beige;
+  height: 120px;
+}
+.logo {
+  height: 100%;
+}
+#title {
+  text-align: center;
+}
+#amsterdam-logo {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  object-fit: contain;
+
+}
+#fiets-logo {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  object-fit: contain;
+}
+#date {
+  float: left;
+}
+#sub-title {
+  float: right;
+}
+@media (max-width: 600px) {
+  .header {
+    height: 60px;
+  }
+}
+@media (max-width: 600px) {
+  .logo img {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .text h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .text h5 {
+    font-size: 10px;
+  }
+}

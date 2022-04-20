@@ -1,0 +1,40 @@
+<div class="row">
+  <div style="font-size: 40px; font-weight: 700; padding-top: 30px; padding-left: 30px">A list of scooters in your
+    neighbourhood
+  </div>
+</div>
+<div class="row">
+
+  <div class="col-4" style="padding: 30px">
+
+
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">Tag</th>
+        <th scope="col">Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr [ngClass]="(scootersService.selectedScooter === scooter) ? 'selected':'notSelected'" *ngFor="let scooter of scooters"
+          (click)="onClickScooterInList(scooter)">
+        <td>{{scooter.tag}}</td>
+        <td>{{scooter.status}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <button style="float: right" *ngIf="removeButtonWhenFalse" type="button" class="btn btn-primary"
+            (click)="createNewScooter()">New Scooter
+    </button>
+  </div>
+
+  <div class="col-4" style="padding-top: 30px">
+
+    <router-outlet>
+    </router-outlet>
+
+  </div>
+  <div class="col-4"></div>
+
+</div>

@@ -1,0 +1,27 @@
+.delete{
+  background: red;
+}
+button{
+  width: 100px;
+  border-color: red!important;
+}
+.scooterThatShowsId{
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+select{
+  margin: 0 0 16px;
+  border-color: mediumblue;
+  color: mediumblue;
+  width: 40%;
+  font-weight: 700;
+}
+.resetClearButtons{
+  background: white;
+  color: mediumblue;
+  border-color: mediumblue !important;
+}
+.saveCancelButtons{
+  border-color: white !important;
+}

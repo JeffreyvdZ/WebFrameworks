@@ -1,0 +1,76 @@
+<div class="content">
+  <div class="row holder">
+
+    <div class="col-3" style="background-color: white">
+
+      <select class="form-control browser-default custom-select" [(ngModel)] = selectedValue  id="exampleFormControlSelect1">
+        <option value="0" selected>City</option>
+        <option value="1" >Amsterdam</option>
+        <option value="2" >Rotterdam</option>
+        <option value="3" >Den Haag</option>
+      </select>
+
+      <div id="paddingForDiv" *ngIf="selectedValue == '1'">
+        <ul class="list-group">
+          <li (click)="hideOnClickLeidseplein()" class="list-group-item">Leidseplein <span class="badge badge-light">4</span></li>
+          <li (click)="hideOnClickHaarlemmerweg()" class="list-group-item">Haarlemmerweg <span class="badge badge-light">3</span></li>
+          <li (click)="hideOnClickAmstelveenseweg()" class="list-group-item">Amstelveense weg <span class="badge badge-light">3</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div   *ngIf="selectedValue == '1'"  class="images col-6" style="background-color: white">
+      <img *ngIf="showHaarlemmerwegFilter" (click)="onClickImage($event)" id="image-0"
+           src="../../../assets/images/Wilier-Filante-SLR-02-b60dbd8.jpg"
+           alt="Bike">
+      <img *ngIf="showHaarlemmerwegFilter" (click)="onClickImage($event)" id="image-1" src="../../../assets/images/fiets0.jpg"
+           alt="Bike">
+      <img *ngIf="showHaarlemmerwegFilter" (click)="onClickImage($event)"id="image-2" src="../../../assets/images/reskin-ebike-landing-curt-right-mobile.jpg"
+           alt="Bike">
+      <img *ngIf="showLeidsepleinFilter" (click)="onClickImage($event)"id="image-3"
+           src="../../../assets/images/fiets3.jpg"
+           alt="Bike">
+      <img *ngIf="showLeidsepleinFilter" (click)="onClickImage($event)"id="image-4"
+           src="../../../assets/images/fiets4.jpg"
+           alt="Bike">
+      <img *ngIf="showLeidsepleinFilter" (click)="onClickImage($event)"id="image-5"
+           src="../../../assets/images/fiets5.jpg"
+           alt="Bike">
+      <img *ngIf="showLeidsepleinFilter" (click)="onClickImage($event)"id="image-6"
+           src="../../../assets/images/fiets6.jpg"
+           alt="Bike">
+      <img *ngIf="showAmstelveensewegFilter" (click)="onClickImage($event)"id="image-7"
+           src="../../../assets/images/fiets7.jpg"
+           alt="Bike">
+      <img *ngIf="showAmstelveensewegFilter" (click)="onClickImage($event)"id="image-8"
+           src="../../../assets/images/fiets8.jpg"
+           alt="Bike">
+      <img *ngIf="showAmstelveensewegFilter"(click)="onClickImage($event)" id="image-9"
+           src="../../../assets/images/fiets9.jpg"
+           alt="Bike">
+
+    </div>
+
+    <div class="info col-3">
+
+      <div>
+        <div class="additionalInfo">Additional Bike info:<br>
+        </div>
+        <hr>
+        <div>
+          <p>{{activity}}</p>
+          {{activityInformation}}
+        </div>
+        <hr>
+        <div>
+          <p>Bike Location:<br> <span>{{bikeLocationHtml}}</span></p>
+          <p><br><span>Approximate duration:</span><br>{{approximateDurationHtml}}</p>
+        </div>
+        <hr>
+        <button type="button" class="btn btn-primary">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</div>
+

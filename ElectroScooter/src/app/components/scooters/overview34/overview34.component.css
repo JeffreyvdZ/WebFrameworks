@@ -1,0 +1,12 @@
+.selected{
+  background: lightskyblue;
+}
+.notSelected{
+  background: white;
+}
+button{
+  width: 150px;
+}
+th{
+  color: mediumblue;
+}

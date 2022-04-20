@@ -1,0 +1,26 @@
+<div class="tablescreen">
+  <h3>A list of scooters in your neighbourhood:</h3>
+  <table class="table table-bordered">
+    <thead>
+    <tr style="background-color: beige">
+      <th scope="col">id</th>
+      <th scope="col">Tag</th>
+      <th scope="col">Status</th>
+      <th scope="col">GPS Location</th>
+      <th scope="col">Total Mileage</th>
+      <th scope="col">Battery Charge</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let scooter of scooters; index as i">
+      <td>{{scooter.id}}</td>
+      <td>{{scooter.tag}}</td>
+      <td>{{scooter.status}}</td>
+      <td>{{scooter.gpsLocation}}</td>
+      <td>{{scooter.mileage}} Km</td>
+      <td>{{scooter.batteryCharge}} %</td>
+   </tr>
+    </tbody>
+  </table>
+  <button (click)="onNewScooter()" type="button" class="btn btn-primary">New Scooter</button>
+</div>

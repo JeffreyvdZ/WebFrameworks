@@ -1,0 +1,33 @@
+<div class="detailview">
+  <div *ngIf="selectedScooterFromOverview !== null; else elseBlock">
+    <div class="card-header">Update Scooter {{selectedScooterFromOverview.tag }} (id={{selectedScooterFromOverview.id}})</div>
+    <form>
+      <div class="form-group">
+        <label for="inputTag">Tag:</label>
+        <input name="tag" type="text" class="form-control" id="inputTag" [(ngModel)]="selectedScooterFromOverview.tag" value="{{selectedScooterFromOverview.tag}}">
+      </div>
+      <div class="form-group">
+        <label for="inputStatus">Status:</label>
+        <select name="status" id="inputStatus" class="form-control" [(ngModel)]="selectedScooterFromOverview.status">
+          <option *ngFor="let status of statuses()" [value]="status">{{status}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="inputGpsLocation">GPS Location:</label>
+        <input name="gpsLocation" type="text" class="form-control" id="inputGpsLocation" [(ngModel)]="selectedScooterFromOverview.gpsLocation" value="{{selectedScooterFromOverview.gpsLocation}}">
+      </div>
+      <div class="form-group">
+        <label for="inputMileage">Mileage:</label>
+        <input name="mileage" type="text" class="form-control" id="inputMileage" [(ngModel)]="selectedScooterFromOverview.mileage" value="{{selectedScooterFromOverview.mileage}}">
+      </div>
+      <div class="form-group">
+        <label for="inputBatteryCharge">Battery Charge:</label>
+        <input name="batteryCharge" type="text" class="form-control" id="inputBatteryCharge" [(ngModel)]="selectedScooterFromOverview.batteryCharge" value="{{selectedScooterFromOverview.batteryCharge}}">
+      </div>
+    </form>
+    <button (click)="onDeleteScooter(selectedScooterFromOverview)" type="submit" class="btn btn-danger" id="deleteButton">Delete</button>
+  </div>
+  <ng-template #elseBlock>
+    <h6 id="title">Select a scooter from the left page</h6>
+  </ng-template>
+</div>

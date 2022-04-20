@@ -1,0 +1,10 @@
+.navbar {
+  background-color: beige;
+  margin-top: 5px;
+}
+.dropdown-menu {
+  background-color: beige ;
+}
+.activeNavBar{
+  background-color: #e5e5cf;
+}
